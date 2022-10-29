@@ -8,21 +8,24 @@ import Home from './components/pages/Home'
 import LiveChat from './components/pages/LiveChat'
 
 import Lang from './context/lang'
+import { SocketContext, socket } from './context/socket'
 
 export default function App() {
   const [context, setContext] = useState('fr')
 
   return (
-    <Lang.Provider value={[context, setContext]}>
-      <Router>
-        <>
-          <Header />
-          <Routes>
-            <Route exact path="/live_chat" element={<LiveChat />} />
-            <Route exact path="/" element={<Home />} />
-          </Routes>
-        </>
-      </Router>
-    </Lang.Provider>
+    <SocketContext.Provider value={socket}>
+      <Lang.Provider value={[context, setContext]}>
+        <Router>
+          <>
+            <Header />
+            <Routes>
+              <Route exact path="/live_chat" element={<LiveChat />} />
+              <Route exact path="/" element={<Home />} />
+            </Routes>
+          </>
+        </Router>
+      </Lang.Provider>
+    </SocketContext.Provider>
   )
 }

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import io from 'socket.io-client'
-
-const socket = io(':3333')
+import React, { useState, useEffect, useContext } from 'react'
+import { SocketContext } from '../../../context/socket'
 
 function App() {
+  const socket = useContext(SocketContext)
+
   const [isConnected, setIsConnected] = useState(socket.connected)
   const [lastPong, setLastPong] = useState(null)
 

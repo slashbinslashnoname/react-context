@@ -14,11 +14,10 @@ import MenuItem from '@mui/material/MenuItem'
 import BlurCircular from '@mui/icons-material/Adb'
 import { useNavigate } from 'react-router-dom'
 
-const pages = ['Live chat']
+const pages = ['Live chat', 'Rooms']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 function URLify(string) {
-  console.log(string)
   return string.split(' ').join('_').toLowerCase()
 }
 

@@ -6,6 +6,7 @@ import Header from './components/organisms/Header'
 
 import Home from './components/pages/Home'
 import LiveChat from './components/pages/LiveChat'
+import Rooms from './components/pages/Rooms'
 
 import Lang from './context/lang'
 import { SocketContext, socket } from './context/socket'
@@ -20,6 +21,7 @@ export default function App() {
           <>
             <Header />
             <Routes>
+              <Route exact path="/rooms" element={<Rooms />} />
               <Route exact path="/live_chat" element={<LiveChat />} />
               <Route exact path="/" element={<Home />} />
             </Routes>

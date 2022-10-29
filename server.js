@@ -6,6 +6,7 @@ const io = require('socket.io')(httpServer, {
   },
 })
 
+// Connection event
 io.on('connection', (socket) => {
   console.log('emit')
   socket.emit('pushState', new Date())

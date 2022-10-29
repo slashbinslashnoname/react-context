@@ -1,16 +1,22 @@
-const server = require('http').createServer()
-const io = require('socket.io')(server)
+const httpServer = require('http').createServer()
+const io = require('socket.io')(httpServer, {
+  cors: {
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST'],
+  },
+})
 
-io.on('connection', (client) => {
-  console.log('client=', client.id)
+io.on('connection', (socket) => {
+  console.log('emit')
+  socket.emit('pushState', new Date())
 
-  client.on('event', (data) => {
-    console.log(data)
-    /* … */
+  socket.on('ping', (msg) => {
+    socket.emit('pong', msg)
   })
-  client.on('disconnect', (client) => {
-    /* … */
-    console.log('client disconnected =', client)
+
+  socket.on('disconnect', () => {
+    console.log('disconnect')
   })
 })
-server.listen(3630)
+
+httpServer.listen(3333)

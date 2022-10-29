@@ -1,0 +1,25 @@
+{
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Slashbin.xyz",
+    "short_name": "SB",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "logo.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ],
+    "scope": "/",
+    "id": "slashbin",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "aliceblue",
+    "background_color": "white"
+}

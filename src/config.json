@@ -1,0 +1,5 @@
+{
+    "api": "https://soloblocks.io/api",
+    "delay": 60000,
+    "delayShort": 30000
+}

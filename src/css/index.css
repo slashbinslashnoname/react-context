@@ -1,0 +1,170 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+}
+a {
+    text-decoration: none;
+}
+.d-flex {
+    display: flex !important;
+}
+.flex-grow-1 {
+    flex-grow: 1 !important;
+}
+.btn:focus,
+.btn:active {
+    /* Remove blue border when you click on a button */
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/*--------------------------------------------------------------
+# Media Query
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Notebook
+--------------------------------------------------------------*/
+@media only screen and (max-width: 1280px) {
+    html {
+        font-size: 95%;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .navbar-nav .dropdown-menu {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+    }
+}
+/*--------------------------------------------------------------
+## Netbook
+--------------------------------------------------------------*/
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 90%;
+    }
+}
+/*--------------------------------------------------------------
+## 991px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 991px) {
+    /* Basics */
+
+    html {
+        font-size: 75%;
+    }
+}
+/*--------------------------------------------------------------
+## Tablet 768px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+    /* Basics */
+
+    html {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+}
+/*--------------------------------------------------------------
+## Mobile L 425px
+--------------------------------------------------------------*/
+@media only screen and (max-width: 425px) {
+    /* Basics */
+
+    html {
+        font-size: 75%;
+    }
+
+    /* home */
+    .main {
+        background-size: 102% 100%;
+    }
+
+    /* Main navigation bar */
+
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*--------------------------------------------------------------
+## Mobile M 375px
+--------------------------------------------------------------*/
+@media screen and (max-width: 375px) and (orientation: portrait) {
+    /* Basics */
+
+    html {
+        font-size: 75%;
+    }
+
+    /* Main navigation bar */
+
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container.container-head.container-home h1 {
+        font-size: 2em;
+    }
+    .container.container-head.container-home h4 {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    .container.container-head.container-home h6 {
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+}
+@media screen and (max-width: 896px) and (max-height: 740px) and (orientation: landscape) {
+    /* Basics */
+
+    html {
+        font-size: 75%;
+    }
+
+    /* Main navigation bar */
+
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container.container-head.container-home h1 {
+        visibility: hidden;
+    }
+    .container.container-head.container-home h4 {
+        display: none;
+    }
+    .container.container-head.container-home h6 {
+        display: none;
+    }
+}
+
+/*--------------------------------------------------------------
+## Small mobile
+--------------------------------------------------------------*/
+
+@media only screen and (max-width: 320px) {
+    /* Basics */
+
+    html {
+        font-size: 75%;
+    }
+
+    /* Main navigation bar */
+
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
